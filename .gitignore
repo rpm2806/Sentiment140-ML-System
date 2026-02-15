@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+.vscode
+
+# Data (Too large for GitHub)
+train_data.csv
+test_data.csv
+results/
+logs/
+
+# Secrets
+.env
+
+# Streamlit
+.streamlit/
