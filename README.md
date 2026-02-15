@@ -24,6 +24,11 @@ During my research, I really wanted to use state-of-the-art Deep Learning models
 -   **It's Accurate:** I achieved **~89% accuracy** on my test set.
 -   **It's Lightweight:** It runs instantly on any CPU.
 
+## 📊 Dataset
+I used the **Tweets Sentiment Analysis** dataset from Kaggle:
+-   [Link to Dataset](https://www.kaggle.com/datasets/krishbaisoya/tweets-sentiment-analysis)
+-   It contains thousands of labeled tweets (Positive/Negative).
+
 ## ✨ Key Features of My App
 -   🚀 **Instant Predictions**: Real-time analysis (<100ms).
 -   🧠 **Hybrid Logic**: I added a custom logic layer to catch positive phrases like "hard work" and "dedication" that the raw model initially misunderstood.
