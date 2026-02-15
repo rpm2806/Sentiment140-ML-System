@@ -1,69 +1,71 @@
-# 🧠 Sentiment Analysis AI (SVM + Hybrid Logic)
+# 🧠 Sentiment Analysis AI (My SVM Project)
 
-A lightweight, high-performance Sentiment Analysis web application powered by **Machine Learning** (Linear SVM) and **Hybrid Rule-Based Logic**.
+Hi! I'm **Rupam**, and this is my lightweight, high-performance Sentiment Analysis web application.
+
+It classifies text sentiment (Positive/Negative) in real-time, powered by **Machine Learning** (Linear SVM) and my own **Hybrid Rule-Based Logic**.
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue) ![Streamlit](https://img.shields.io/badge/Streamlit-App-red) ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange)
 
-## 📌 Project Overview
-This project classifies text sentiment (Positive/Negative) in real-time. It was designed to run efficiently on standard CPU hardware without requiring heavy GPU resources.
+## 📌 Why I Built This
+I wanted to build a text classification system that could run efficiently on my laptop without needing heavy cloud resources. My goal was to balance **speed** and **accuracy**.
 
-We compared multiple architectures (Logistic Regression, SVM, LSTM, DistilBERT) and selected **Linear Support Vector Machine (SVM)** as the production model due to its superior speed and accuracy on our dataset.
+I experimented with several models (Logistic Regression, SVM, LSTM, DistilBERT) and ultimately chose **Linear Support Vector Machine (SVM)** as the best solution for my constraints.
 
-## ⚠️ Challenges & Design Decisions
-**Why SVM instead of BERT?**
-During our research phase, we experimented with advanced Deep Learning models (LSTM, DistilBERT). However, we faced two critical constraints:
-1.  **Hardware Limitations**: Lack of a high-performance GPU meant training large Transformer models was extremely slow and difficult to fine-tune.
-2.  **Dataset Constraints**: The available dataset was relatively small for deep learning generalization.
+## ⚠️ Challenges & My Design Decisions
+**Why I chose SVM instead of BERT:**
+During my research, I really wanted to use state-of-the-art Deep Learning models like DistilBERT. However, I faced two main challenges:
+1.  **Hardware:** My local machine lacks a high-performance GPU, which made training large Transformer models incredibly slow and difficult.
+2.  **Data:** The dataset I had was relatively small for deep learning to generalize well.
 
-**Result**: The complex models (BERT/LSTM) struggled to converge, often yielding accuracy **below 50%** or exhibiting severe bias (predicting only "Negative").
+**The Result:** When I tried training BERT, it struggled to converge and often gave accuracy **below 50%**, or worse, it became biased and predicted "Negative" for everything.
 
-**Solution**: We pivoted to a **Linear SVM** combined with **TF-IDF vectorization**. This approach proved to be the winner:
--   **Faster**: Training takes seconds, not hours.
--   **More Accurate**: Achieved **~89% accuracy** on our test set.
--   **Lightweight**: Can run on any standard laptop CPU.
+**My Solution:** I pivoted to a **Linear SVM** combined with **TF-IDF vectorization**. This decision paid off:
+-   **It's Fast:** I can retrain the whole model in seconds.
+-   **It's Accurate:** I achieved **~89% accuracy** on my test set.
+-   **It's Lightweight:** It runs instantly on any CPU.
 
-## ✨ Key Features
--   🚀 **Instant Predictions**: Real-time analysis (<100ms inference).
--   🧠 **Hybrid Logic**: Uses a custom dictionary to boost scores for positive concepts like "hard work", "dedication", and "achieve" that pure ML might miss.
--   🌐 **Web Interface**: Clean, simple UI built with [Streamlit](https://streamlit.io).
--   📊 **Confidence Scoring**: Shows model confidence for every prediction.
+## ✨ Key Features of My App
+-   🚀 **Instant Predictions**: Real-time analysis (<100ms).
+-   🧠 **Hybrid Logic**: I added a custom logic layer to catch positive phrases like "hard work" and "dedication" that the raw model initially misunderstood.
+-   🌐 **Web Interface**: I built a clean, simple UI using [Streamlit](https://streamlit.io).
+-   📊 **Confidence Scoring**: I show exactly how confident the model is.
 
-## 🛠️ Tech Stack
+## 🛠️ My Tech Stack
 -   **Language**: Python 3.10
 -   **Web Framework**: Streamlit
 -   **ML Library**: Scikit-Learn (LinearSVC, TfidfVectorizer)
 -   **NLP Utilities**: NLTK (Stopwords, Tokenization)
--   **Deployment**: LocalHost
+-   **Development**: Local Environment
 
-## 🚀 Installation & Usage
+## 🚀 How to Run My Code
 
-1.  **Clone the Repository**:
+1.  **Clone my repo**:
     ```bash
     git clone https://github.com/yourusername/sentiment-analysis-ai.git
     cd sentiment-analysis-ai
     ```
 
-2.  **Install Dependencies**:
+2.  **Install the requirements**:
     ```bash
     pip install streamlit pandas scikit-learn nltk joblib
     ```
 
-3.  **Run the App**:
+3.  **Launch the App**:
     ```bash
     streamlit run app.py
     ```
 
-4.  **(Optional) Retrain Model**:
-    If you have new data in `train_data.csv`, run:
+4.  **(Optional) Retrain**:
+    I included a script to retrain the model if you add new data to `train_data.csv`:
     ```bash
     python train_model.py
     ```
 
 ## 📂 Project Structure
--   `app.py`: Main application code (Streamlit).
--   `train_model.py`: Script to train the SVM model and save artifacts.
--   `saved_models/`: Directory containing the trained `svm_model.pkl` and `tfidf_vectorizer.pkl`.
--   `sentiment_analysis_phase1.ipynb`: Original research notebook (cleaned).
+-   `app.py`: My Streamlit application code.
+-   `train_model.py`: The script I wrote to train the SVM.
+-   `saved_models/`: Where I save the trained `svm_model.pkl` and vectorizer.
+-   `sentiment_analysis_phase1.ipynb`: My original research notebook (cleaned up).
 
 ---
-*Created by Rupam*
+*Created with ❤️ by Rupam*
