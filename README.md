@@ -1,4 +1,4 @@
-# 🧠 Sentiment Analysis AI (My SVM Project)
+# 🧠 Sentiment Analysis AI
 
 Hi! I'm **Rupam**, and this is my lightweight, high-performance Sentiment Analysis web application.
 
